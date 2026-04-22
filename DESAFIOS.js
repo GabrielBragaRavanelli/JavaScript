@@ -133,10 +133,10 @@ let tentativas1 = 0;
 
 while (numeroSecreto !== numeroAleatorio1) {
     numeroAleatorio1 = Math.floor(Math.random() * (50 - 1 + 1) + 1);
-    tentativas++;
+    tentativas1++;
 }
 
-console.log(`adivinhou em ${tentativas} tentativas`);
+console.log(`adivinhou em ${tentativas1} tentativas`);
 
 let numeroRandom = 0;
 
@@ -167,3 +167,65 @@ const result = texto === textoInvertido
     : `${texto} não é palíndromo`;
         
 console.log(result);
+
+
+// FUNCTION
+
+// elevar um número x a uma potência y
+
+function calculaPotencia(num, pow){
+    let resultado9 = 1;
+    for(let i =0; i<pow; i++){
+        resultado9 = resultado9 *num
+
+    }
+    return resultado9;
+}
+
+console.log(calculaPotencia(4,3));
+console.log(calculaPotencia(5,5));
+
+// criar função que calcula o fatorial de um número usando recursão.
+// fatorial: n! multiplicação de n por seus antecessores maiores ou iguais a 1
+// ex: 5! = 5 x 4 x 3 x 2 x 1
+
+const fatorial = function f(num){
+    if(num ===0 || num === 1) return 1;
+    return num * f (num-1)
+    
+}
+console.log(fatorial(5));
+console.log(fatorial(8));
+console.log(fatorial(9));
+
+//O objetivo é criar uma função para calcular juros compostos. Isto é, dado um valor inicial, uma taxa de juros e um período de tempo, queremos receber o valor final já contendo os juros acumulados.
+//Para facilitar, vamos passar juros e tempo como números inteiros. O primeiro vai equivaler a uma taxa em porcentagem (por exemplo, 5% ou 2%) e o segundo a uma quantia de meses (por exemplo, 2 ou 3 meses).
+//A fórmula utilizada para esse cálculo será: valor multiplicado à taxa de juros elevada ao tempo
+
+const calculaJuros = (valor,juros, tempo   ) => {
+    let taxaJuros = (juros / 100) + 1;
+    return valor * Math.pow(taxaJuros, tempo);
+}
+
+console.log(calculaJuros(1000, 5, 2));
+
+
+function soma9 (a,b){return a + b}
+function multiplica (a,b){return a * b}
+
+function calcula(operacao, valor1, valor2){
+    return operacao(valor1, valor2)
+}
+
+console.log(calcula(soma9, 5, 5));
+console.log(calcula(multiplica, 5, 5));
+
+
+const userId = '4545656';
+
+const avisaUsuario = userId => console.log(`sessão de ${userId} está inativa`);
+
+
+setTimeout((userId) => console.log(`sessão de ${userId} está inativa`), 4000, userId);
+//ou
+//setTimeout(avisaUsuario, 2000, userId);
