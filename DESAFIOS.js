@@ -1,4 +1,4 @@
-console.log("bem vindo ao calculadora de trocoas")
+console.log("bem vindo ao calculadora de trocos")
 
 let valorPago =20
 let valorProduto = 15
@@ -41,13 +41,13 @@ if(operacao === "soma") {
 // $ 6999 a $4008: 7% de bônus 
 // $3999 p baixo: 9% de bônus 
 
-const salarіо = 2000
+const salario = 2000
 
-if(salarіо >= 11000){
+if(salario >= 11000){
     console.log("3% de bônus" )
-} else if(salarіо < 11000 && salarіо >= 7000){
+} else if(salario < 11000 && salario >= 7000){
     console.log("5% de bônus")
-} else if(salarіо < 7000 && salarіо >= 4000){
+} else if(salario < 7000 && salario >= 4000){
     console.log("7% de bônus")
 } else{
     console.log("9% de bônus")
@@ -229,3 +229,64 @@ const avisaUsuario = userId => console.log(`sessão de ${userId} está inativa`)
 setTimeout((userId) => console.log(`sessão de ${userId} está inativa`), 4000, userId);
 //ou
 //setTimeout(avisaUsuario, 2000, userId);
+
+// ARRAY
+// pratique construindo arrays e acessando seus elementos através dos índices
+
+const arr = [1, 2, 3, 4];
+
+console.log(arr[0]);
+console.log(arr[1]);
+console.log(arr[2]);
+console.log(arr[3]);
+
+// criar um array com uma sequência de números entre x e y
+
+function criaArrnum(inicio,fim){
+    const arr = [];
+    let elemento9 = inicio;
+    for(let i = 0, j = 0; j < fim; i++, elemento9++){
+        arr[i] = elemento9;
+        j = elemento9
+    }
+    return arr;
+}
+console.log(criaArrnum(12,30));
+
+
+// clonar array multidimensional com "deep copy"
+// por que não podemos clonar arrays via variável?
+
+const arr1 = [[1, 2], 2, 3];
+
+const copiaArry = (arr) =>{
+    const copia = [];
+    arr.forEach((elem) => {
+        if(Array.isArray(elem)){
+            copia.push(copiaArry(elem));
+        }else{
+            copia.push(elem);
+        }
+    });
+    return copia;
+}
+
+const arr2 = copiaArry(arr1);
+arr2[0][0] = 5;
+
+console.log(arr1);
+console.log(arr2);
+
+// filtrar um array e alterar valores específicos
+// ex: alterar números para strings
+
+const cpfs = ['12323434545', '34658756786', 43254365434, '76547865345', 56768767564];
+
+const filteredCpfs = cpfs.map(cpf => {
+    if(typeof cpf === 'string'){
+        return cpf
+    }else{
+       return cpf.toString()
+    }
+});
+console.log(filteredCpfs);
