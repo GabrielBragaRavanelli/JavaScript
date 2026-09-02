@@ -32,8 +32,6 @@ notadoAluno >= 9 ? console.log("Excelente nota") :
         notadoAluno >= 4 ? console.log("Nota suficiente") : 
             console.log("Reprovado")
 
-
-
 const nota1 = 9
 const nota2 = 6
 const nota3 = 5
@@ -60,4 +58,58 @@ media >= 9 ? console.log ("Excelenete semestre "):
 
 
 
+
+var idadecadastro = 15
+
+if(idadecadastro >= 18){
+    console.log("Você tem idade suficiente para fazer cadastro")
+} else if (idadecadastro >= 16){
+    console.log("Por pouco você não apresnta idade suficiente para o cadastro")
+} else {
+    console.log("Você Não possui idade suficiente pra cadastro")
+}
+
+var idadecadastro = 16
+
+if(idadecadastro >= 18){
+    console.log("Você tem idade suficiente para fazer cadastro")
+} else if (idadecadastro >= 16){
+    console.log("Por pouco você não apresnta idade suficiente para o cadastro")
+} else {
+    console.log("Você Não possui idade suficiente pra cadastro")
+}
+
+var idadecadastro = 19
+
+if(idadecadastro >= 18){
+    console.log("Você tem idade suficiente para fazer cadastro")
+} else if (idadecadastro >= 16){
+    console.log("Por pouco você não apresnta idade suficiente para o cadastro")
+} else {
+    console.log("Você Não possui idade suficiente pra cadastro")
+}
+
+const aluna1 = {
+    matametica: '7',
+    portugues: '5',
+    ingles: '9',
+    ciencias: '8'
+
+}
+
+const aluna2 = {
+    matametica: '6,75',
+    portugues: '7',
+    ingles: '8',
+    ciencias: '4'
+
+}
+
+const aluna3 = {
+    matametica: '5',
+    portugues: '8,5',
+    ingles: '7',
+    ciencias: '6'
+
+}
 
