@@ -25,3 +25,25 @@ console.log("Eu posso assistir o filme?" + assistirFilme)
 
 const possoAssistir = pais || filmeTerror
 console.log("Posso assistir a este filme?" + possoAssistir)
+
+const idadedoMotorista = 48
+const Carteira = true 
+const idadeparaDirigir = idadedoMotorista >=18
+
+const possodirigir = Carteira && idadeparaDirigir
+console.log("O motorista da Ajborges pode diregir o caminhão?" + possodirigir)
+
+const idadeCrianca = 13
+const responsabilidadepais = true
+const idadefilme = idadeCrianca >= 14
+
+const filmeassistir = idadefilme || responsabilidadepais
+console.log ("Essa criança possui idade para assistir este filme de terror?" + filmeassistir)
+
+const idadeCrianca2 = 13
+const responsabilidadepais2 = true
+const idadefilme2 = idadeCrianca >= 14
+
+const filmeassistir2 = idadefilme2 && responsabilidadepais2
+console.log("Meu filho pode assistir ao filme?" + filmeassistir2)
+
